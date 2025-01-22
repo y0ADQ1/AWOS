@@ -1,0 +1,35 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ts",
+    "dev": "nodemon index.ts",
+    "build": "tsc",
+    "migrate": "cd ./db && npx sequelize-cli db:migrate",
+    "create:migration": "cd ./db && npx sequelize-cli migration:generate --name",
+    "create:seed": "cd ./db && npx sequelize-cli seed:generate --name",
+    "migrate:undo": "cd ./db && npx sequelize-cli db:migrate:undo",
+    "seed:undo": "cd ./db && npx sequelize-cli db:seed:undo",
+    "seed:all": "cd ./db && npx sequelize-cli db:seed:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7"
+  }
+}
